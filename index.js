@@ -5,11 +5,11 @@ const allPomodoros = document.querySelector('#all-pomodoros');
 /** EVENT LISTENER **/
 document.querySelector('#add-pomodoros-form').addEventListener('submit', handleSubmit)
 
-/** EVENT HANDLING **/
+/** EVENT HANDLER **/
 function handleSubmit(e) {
     e.preventDefault();
     let pomodoroObj = {
-        topic:e.target.topic.value, //has to match name on the node
+        topic:e.target.topic.value, 
         category:e.target.category.value,
         due:e.target.due.value,
         pomodoroNum: 1
@@ -25,7 +25,6 @@ function getPomodoros() {
 }
 getPomodoros(); //initialize
 
-/** NODE GETTERS **/
 
 /** RENDERS **/
 function renderOnePomodoro(pomodoro) {
