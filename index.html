@@ -4,11 +4,65 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script src="index.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    
+    <title>Phase 1 Project</title>
+    
     <link rel="stylesheet" href="style.css">
+
+    <script defer src="index.js"></script>
+
+
 </head>
 <body>
-    <h1>My Project</h1>
+    <nav class="tomato">
+        <div class="nav-wrapper container">
+          <a href="#" class="brand-logo">Study Time!</a> <!--Enter Text Here-->
+          <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li><a href="#">Feature #1</a></li> <!--Enter Text Here-->
+            <li><a href="#">Feature #2</a></li>
+            <li><a href="#"></a></li>
+          </ul>
+        </div>
+    </nav>
+    <h1>Welcome to the Pomodoros</h1>
+    <img id="tomato" src="https://pngimage.net/wp-content/uploads/2018/06/tomatoes-cartoon-png-4.png" alt="tomato" />
+    <p>
+      Let's study with pomodoros! Per the Pomodoro Technique, please allocate your work into 25-minute sessions. Each session is represented by a pomodoro.
+    </p>
+    <div class="container">
+      <form id="add-pomodoros-form">
+        <label for="topic">Topic</label>
+        <input 
+          type="text" 
+          id="topic" 
+          name="topic" 
+        />
+        <label for="category">Category</label>
+        <input 
+          type="text" 
+          id="category" 
+          name="category" 
+        />
+        <label for="due">Due Date</label>
+        <input 
+          type="text" 
+          id="due" 
+          name="due" 
+        />
+        <button type="submit">Add!</button>  
+      </form>
+    </div>
+    <div id="all-pomodoros">
+      <!-- topics go here -->
+    </div>
+    <main></main>
 </body>
 </html>

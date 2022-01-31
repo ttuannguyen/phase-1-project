@@ -1,3 +1,16 @@
 h1 {
-    color: green;
+    color: tomato;
+    text-align: center;
 }
+
+p {
+    text-align: center;
+}
+
+#tomato {
+    display: block;
+    margin: auto;
+    height: 100%;
+    width: 10%;
+}
+
