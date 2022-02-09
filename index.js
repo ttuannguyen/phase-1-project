@@ -54,8 +54,8 @@ function render(pomodoro) {
 
     //Event listener to increase pomodoro count
     card.querySelector(".buttons").addEventListener("click", (event) => {
-        console.log(event.target.dataset)
-        //increasePomodoroCount(event)
+        //console.log(event.target.dataset)
+        increasePomodoroCount(event)
     }
 
     )   
@@ -89,4 +89,7 @@ function addNewPomodoro(pomodoroObj) {
         document.getElementById('category').value = '';
         document.getElementById('due').value = '';
      })
+}
+function increasePomodoroCount(e) {
+    //
 }
