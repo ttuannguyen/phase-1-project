@@ -83,5 +83,10 @@ function addNewPomodoro(pomodoroObj) {
         body: JSON.stringify(pomodoroObj)
     })
      .then(res => res.json())
-     .then(json => render(json))
+     .then(json => {
+        render(json);
+        document.getElementById('topic').value = '';
+        document.getElementById('category').value = '';
+        document.getElementById('due').value = '';
+     })
 }
