@@ -15,9 +15,14 @@ document.addEventListener('DOMContentLoaded', () => {
 /** FETCH REQUESTS **/
 
 
+async function fetchData() {
+    let res = await fetch(base_url)
+    let data = await res.json()
+    return data
+}
+
 function getPomodoros() {
-    fetchData(base_url)
-    .then(res => res.json())
+    fetchData()
     .then(pomodoroData => { 
         pomodoroData.map(pomodoro => render(pomodoro))
     })
