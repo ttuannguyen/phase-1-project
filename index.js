@@ -91,5 +91,14 @@ function addNewPomodoro(pomodoroObj) {
      })
 }
 function increasePomodoroCount(e) {
-    //
+    fetch(base_url, {
+        method: 'PATCH',
+        headers: {
+            "Content-Type": "application/json",
+            "Accept": "application/json"
+    
+          },
+        body: JSON.stringify({
+            //
+    })
 }
