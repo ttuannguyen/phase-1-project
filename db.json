@@ -2,17 +2,24 @@
   "data": [
     {
       "topic": "Scope",
-      "category": "Lesson",
+      "category": "Lab",
       "due": "01/31/2021",
-      "pomodoroNum": 5,
-      "id": 5
+      "pomodoroNum": 1,
+      "id": 1
     },
     {
-      "topic": "DOM",
+      "topic": "Functions",
       "category": "Lesson",
-      "due": "01/31/2021",
-      "pomodoroNum": 5,
-      "id": 6
+      "due": "02/06/2022",
+      "pomodoroNum": 1,
+      "id": 2
+    },
+    {
+      "topic": "Phase 1 Project",
+      "category": "Project",
+      "due": "02/06/2022",
+      "pomodoroNum": 1,
+      "id": 3
     }
   ]
 }
