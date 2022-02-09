@@ -59,5 +59,9 @@ function render(pomodoro) {
     }
 
     )   
+}
 
+/** EVENT HANDLERS **/
+function handleSubmit(event) {
+    event.preventDefault();
 }
