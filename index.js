@@ -36,10 +36,18 @@ function render(pomodoro) {
         <p>
             <b>Topic: ${pomodoro.topic}</b>
         </p>
-        <p>Category: ${pomodoro.category}</p>
-        <p>Due Date: ${pomodoro.due}</p>
-        <p>${pomodoro.pomodoroNum} pomodoros</p>
-        <button class="buttons" id=${pomodoro.id}>&#127813</button>
+        <p>
+            Category: ${pomodoro.category}
+        </p>
+        <p>
+            Due Date: ${pomodoro.due}
+        </p>
+        <p>
+            ${pomodoro.pomodoroNum} pomodoros
+        </p>
+        <button class="buttons" id=${pomodoro.id}>
+            &#127813
+        </button>
     `;
 
     allPomodoros.appendChild(card);
@@ -49,7 +57,7 @@ function render(pomodoro) {
         console.log(event.target.dataset)
         //increasePomodoroCount(event)
     }
-    
+
     )   
 
 }
