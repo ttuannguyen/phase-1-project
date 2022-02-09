@@ -83,5 +83,5 @@ function addNewPomodoro(pomodoroObj) {
         body: JSON.stringify(pomodoroObj)
     })
      .then(res => res.json())
-     //.then(json => console.log(json))
+     .then(json => render(json))
 }
