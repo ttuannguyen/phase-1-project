@@ -74,5 +74,14 @@ function handleSubmit(event) {
 }
 
 function addNewPomodoro(pomodoroObj) {
-    //
+    fetch('http://localhost:3000/data', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+        },
+        body: JSON.stringify()
+    })
+     //.then(res => res.json())
+     //.then(json => console.log(json))
 }
