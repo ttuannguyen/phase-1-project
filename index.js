@@ -46,11 +46,10 @@ function render(pomodoro) {
 
     //Event listener to increase pomodoro count
     card.querySelector(".buttons").addEventListener("click", (event) => {
-        //console.log(event.target.dataset)
+        console.log(event.target.dataset)
         //increasePomodoroCount(event)
     }
-        //pomodoro.pomodoroNum+=1;
-        //card.querySelector("span").innerText = pomodoro.pomodoroNum;
+    
     )   
 
 }
