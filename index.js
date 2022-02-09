@@ -64,4 +64,10 @@ function render(pomodoro) {
 /** EVENT HANDLERS **/
 function handleSubmit(event) {
     event.preventDefault();
+    let pomodoroObj = {
+        topic: event.target.topic.value, 
+        category: event.target.category.value,
+        due: event.target.due.value,
+        pomodoroNum: 1
+    };
 }
