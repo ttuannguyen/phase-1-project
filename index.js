@@ -91,6 +91,9 @@ function addNewPomodoro(pomodoroObj) {
      })
 }
 function increasePomodoroCount(e) {
+    
+    let increase = parseInt(e.target.previousElementSibling.innerText) + 1
+    
     fetch(base_url + `/${e.target.id}`, {
         method: 'PATCH',
         headers: {
