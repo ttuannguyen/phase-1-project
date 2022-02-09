@@ -70,4 +70,9 @@ function handleSubmit(event) {
         due: event.target.due.value,
         pomodoroNum: 1
     };
+    addNewPomodoro(pomodoroObj);
+}
+
+function addNewPomodoro(pomodoroObj) {
+    //
 }
