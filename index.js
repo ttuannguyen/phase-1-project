@@ -80,8 +80,8 @@ function addNewPomodoro(pomodoroObj) {
             'Content-Type': 'application/json',
             'Accept': 'application/json'
         },
-        body: JSON.stringify()
+        body: JSON.stringify(pomodoroObj)
     })
-     //.then(res => res.json())
+     .then(res => res.json())
      //.then(json => console.log(json))
 }
