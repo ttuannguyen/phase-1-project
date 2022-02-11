@@ -34,7 +34,7 @@ function render(pomodoro) {
     let card = document.createElement('div');
     card.innerHTML = `
         <p>
-            <b>Topic: ${pomodoro.topic}</b>
+            <b>Name: ${pomodoro.name}</b>
         </p>
         <p>Category: ${pomodoro.category}</p>
         <p>Due Date: ${pomodoro.due}</p>
@@ -53,12 +53,11 @@ function render(pomodoro) {
 }
 
 
-
 /** EVENT HANDLERS **/
 function handleSubmit(event) {
     event.preventDefault();
     let pomodoroObj = {
-        topic: event.target.topic.value, 
+        name: event.target.name.value, 
         category: event.target.category.value,
         due: event.target.due.value,
         pomodoroNum: 1
@@ -78,7 +77,7 @@ function addNewPomodoro(pomodoroObj) {
      .then(res => res.json())
      .then(json => {
          render(json);
-         document.getElementById('topic').value = '';
+         document.getElementById('name').value = '';
          document.getElementById('category').value = '';
          document.getElementById('due').value = '';
      })

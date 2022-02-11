@@ -1,18 +1,11 @@
 {
   "data": [
     {
-      "topic": "Higher-Order Functions ",
+      "name": "Higher-Order Functions ",
       "category": "Lesson",
       "due": "01/31/2022",
-      "pomodoroNum": 3,
+      "pomodoroNum": 1,
       "id": 1
-    },
-    {
-      "topic": "Connecting to the Server",
-      "category": "Lab",
-      "due": "01/31/2022",
-      "pomodoroNum": 4,
-      "id": 2
     }
   ]
 }
