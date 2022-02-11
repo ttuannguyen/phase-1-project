@@ -1,25 +1,18 @@
 {
   "data": [
     {
-      "topic": "Scope",
-      "category": "Lab",
-      "due": "01/31/2021",
-      "pomodoroNum": 1,
+      "topic": "Higher-Order Functions ",
+      "category": "Lesson",
+      "due": "01/31/2022",
+      "pomodoroNum": 3,
       "id": 1
     },
     {
-      "topic": "Functions",
-      "category": "Lesson",
-      "due": "02/06/2022",
-      "pomodoroNum": 1,
+      "topic": "Connecting to the Server",
+      "category": "Lab",
+      "due": "01/31/2022",
+      "pomodoroNum": 4,
       "id": 2
-    },
-    {
-      "topic": "Phase 1 Project",
-      "category": "Project",
-      "due": "02/06/2022",
-      "pomodoroNum": 1,
-      "id": 3
     }
   ]
 }

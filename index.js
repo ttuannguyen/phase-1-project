@@ -13,14 +13,14 @@ document.addEventListener('DOMContentLoaded', () => {
 })
 
 /** FETCH REQUESTS **/
-
-
 async function fetchData() {
     let res = await fetch(base_url)
     let data = await res.json()
     return data
 }
 
+
+/** GETTER **/
 function getPomodoros() {
     fetchData()
     .then(pomodoroData => { 
@@ -28,7 +28,7 @@ function getPomodoros() {
     })
 }
 
-/** RENDER **/
+/** RENDERER **/
 function render(pomodoro) {
 
     let card = document.createElement('div');
@@ -36,30 +36,23 @@ function render(pomodoro) {
         <p>
             <b>Topic: ${pomodoro.topic}</b>
         </p>
-        <p>
-            Category: ${pomodoro.category}
-        </p>
-        <p>
-            Due Date: ${pomodoro.due}
-        </p>
-        <p>
-            ${pomodoro.pomodoroNum} pomodoros
-        </p>
-        <button class="buttons" id=${pomodoro.id}>
-            &#127813
-        </button>
+        <p>Category: ${pomodoro.category}</p>
+        <p>Due Date: ${pomodoro.due}</p>
+        <p>${pomodoro.pomodoroNum} pomodoros</p>
+        <button class="buttons" id=${pomodoro.id}>&#127813</button>
     `;
 
     allPomodoros.appendChild(card);
 
     //Event listener to increase pomodoro count
     card.querySelector(".buttons").addEventListener("click", (event) => {
-        //console.log(event.target.dataset)
         increasePomodoroCount(event)
-    }
+    }) 
 
-    )   
+
 }
+
+
 
 /** EVENT HANDLERS **/
 function handleSubmit(event) {
@@ -84,16 +77,17 @@ function addNewPomodoro(pomodoroObj) {
     })
      .then(res => res.json())
      .then(json => {
-        render(json);
-        document.getElementById('topic').value = '';
-        document.getElementById('category').value = '';
-        document.getElementById('due').value = '';
+         render(json);
+         document.getElementById('topic').value = '';
+         document.getElementById('category').value = '';
+         document.getElementById('due').value = '';
      })
 }
+
 function increasePomodoroCount(e) {
     
     let increase = parseInt(e.target.previousElementSibling.innerText) + 1
-    
+
     fetch(base_url + `/${e.target.id}`, {
         method: 'PATCH',
         headers: {
@@ -102,7 +96,10 @@ function increasePomodoroCount(e) {
     
           },
         body: JSON.stringify({
-            //
+            "pomodoroNum": increase
+          }) 
     })
-})
 }
+
+
+
