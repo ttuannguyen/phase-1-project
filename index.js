@@ -99,6 +99,7 @@ function increasePomodoroCount(e) {
             "pomodoroNum": increase
           }) 
     })
+    .then(res => res.json())
 }
 
 
