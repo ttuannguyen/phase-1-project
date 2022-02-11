@@ -49,7 +49,6 @@ function render(pomodoro) {
         increasePomodoroCount(event)
     }) 
 
-
 }
 
 
@@ -66,7 +65,7 @@ function handleSubmit(event) {
 }
 
 function addNewPomodoro(pomodoroObj) {
-    fetch('http://localhost:3000/data', {
+    fetch(base_url, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
@@ -100,7 +99,7 @@ function increasePomodoroCount(e) {
     })
     .then(res => res.json())
     .then(json => {
-        e.target.previousElementSibling.innerText = `${increase} pomodoros`
+        e.target.previousElementSibling.innerText = `${json.pomodoroNum} pomodoros`
     })
 }
 

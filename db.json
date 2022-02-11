@@ -1,11 +1,32 @@
 {
   "data": [
     {
-      "name": "Higher-Order Functions ",
+      "name": "Scope ",
       "category": "Lesson",
       "due": "01/31/2022",
       "pomodoroNum": 1,
       "id": 1
+    },
+    {
+      "name": "Phase 1 Project",
+      "category": "Project",
+      "due": "02/06/2022",
+      "pomodoroNum": 2,
+      "id": 2
+    },
+    {
+      "name": "Functions",
+      "category": "Lab",
+      "due": "01/31/2022",
+      "pomodoroNum": 1,
+      "id": 3
+    },
+    {
+      "name": "DOM",
+      "category": "Lesson",
+      "due": "01/31/2022",
+      "pomodoroNum": 1,
+      "id": 4
     }
   ]
 }

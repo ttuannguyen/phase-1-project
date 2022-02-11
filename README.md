@@ -21,9 +21,18 @@ A user can add a new pomodoro card to the DOM via a form. This is triggered by a
 Increase Pomodoro Count Feature: 
 A user can increase the pomodoro count using a "tomato" button. This is triggered by clicking on the "tomato" button. The effect is number of pomodoros will increase with each click. 
 
-### How To Use
+### Usage
 1) Choose a topic in the curriculum. 
 2) Enter the details (name, type, due date) into the form and click the "add" button.
 3) To increase the number of pomodoros associated with a topic or assignment, click on the tomato button. 
+
+### Installation Instructions
+1) Copy the SSH key in Github
+2) Command in terminal: 
+"git clone " and paste the copied SSH key
+
+
+
+
 
 
