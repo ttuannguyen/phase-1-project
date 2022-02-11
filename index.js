@@ -100,6 +100,9 @@ function increasePomodoroCount(e) {
           }) 
     })
     .then(res => res.json())
+    .then(json => {
+        e.target.previousElementSibling.innerText = `${increase} pomodoros`
+    })
 }
 
 
