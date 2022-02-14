@@ -27,9 +27,15 @@ A user can increase the pomodoro count using a "tomato" button. This is triggere
 3) To increase the number of pomodoros associated with a topic or assignment, click on the tomato button. 
 
 ### Installation Instructions
+Clone files from Github:
 1) Copy the SSH key in Github
 2) Command in terminal: 
 "git clone " and paste the copied SSH key
+
+To install json-server:
+$  npm install -g json-server
+$  json-server monsters.json
+
 
 
 

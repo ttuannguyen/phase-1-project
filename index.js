@@ -12,13 +12,12 @@ document.addEventListener('DOMContentLoaded', () => {
     })
 })
 
-/** FETCH REQUESTS **/
+/** FETCH **/
 async function fetchData() {
     let res = await fetch(base_url)
     let data = await res.json()
     return data
 }
-
 
 /** GETTER **/
 function getPomodoros() {
