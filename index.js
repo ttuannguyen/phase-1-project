@@ -1,25 +1,32 @@
 /** GLOBALS **/
+// console.log(test);
+// let test = "hello"
 const base_url = "http://localhost:3000/data";
 let allPomodoros = document.querySelector('#all-pomodoros');
 let form = document.querySelector('#add-pomodoros-form');
 
 
-/* WHEN THE DOM LOADS */
+/** WHEN THE DOM LOADS **/
 document.addEventListener('DOMContentLoaded', () => {
     getPomodoros(); //initialize
+    colorize.addEventListener('click', handleColorize)
     form.addEventListener('submit', (event) => {
         handleSubmit(event);
     })
 })
 
-/** FETCH **/
+/** FETCH & GET **/
 async function fetchData() {
-    let res = await fetch(base_url)
-    let data = await res.json()
-    return data
+    try {
+        let res = await fetch(base_url)
+        let data = await res.json()
+        return data    
+    } catch (error) {
+        alert(error)
+    }
+    
 }
 
-/** GETTER **/
 function getPomodoros() {
     fetchData()
     .then(pomodoroData => { 
@@ -33,7 +40,7 @@ function render(pomodoro) {
     let card = document.createElement('div');
     card.innerHTML = `
         <p>
-            <b>Name: ${pomodoro.name}</b>
+            <b class="name">Name: ${pomodoro.name}</b>
         </p>
         <p>Category: ${pomodoro.category}</p>
         <p>Due Date: ${pomodoro.due}</p>
@@ -47,20 +54,28 @@ function render(pomodoro) {
     card.querySelector(".buttons").addEventListener("click", (event) => {
         increasePomodoroCount(event)
     }) 
+}
 
+/** EVENT HANDLERS **/
+
+function handleColorize() {
+    const names = document.querySelectorAll(".name");
+    names.forEach(name => name.style.color = "#" + Math.floor(Math.random()*16777215).toString(16))
 }
 
 
-/** EVENT HANDLERS **/
 function handleSubmit(event) {
     event.preventDefault();
+    if(event.target.name.value === null) {
+        console.log('null')
+    }
     let pomodoroObj = {
         name: event.target.name.value, 
         category: event.target.category.value,
         due: event.target.due.value,
         pomodoroNum: 1
     };
-    addNewPomodoro(pomodoroObj);
+    addNewPomodoro(pomodoroObj)
 }
 
 function addNewPomodoro(pomodoroObj) {
@@ -82,14 +97,12 @@ function addNewPomodoro(pomodoroObj) {
 }
 
 function increasePomodoroCount(e) {
-    
     let increase = parseInt(e.target.previousElementSibling.innerText) + 1
-
     fetch(base_url + `/${e.target.id}`, {
         method: 'PATCH',
         headers: {
-            "Content-Type": "application/json",
-            "Accept": "application/json"
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
     
           },
         body: JSON.stringify({
@@ -101,6 +114,3 @@ function increasePomodoroCount(e) {
         e.target.previousElementSibling.innerText = `${json.pomodoroNum} pomodoros`
     })
 }
-
-
-

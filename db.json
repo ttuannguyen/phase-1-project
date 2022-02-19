@@ -1,31 +1,31 @@
 {
   "data": [
     {
-      "name": "Scope ",
+      "name": "Big O Notation ",
       "category": "Lesson",
       "due": "01/31/2022",
       "pomodoroNum": 7,
       "id": 1
     },
     {
-      "name": "Phase 1 Project",
-      "category": "Project",
-      "due": "02/06/2022",
-      "pomodoroNum": 16,
+      "name": "Arrow Functions ",
+      "category": "Lab",
+      "due": "01/31/2022",
+      "pomodoroNum": 5,
       "id": 2
     },
     {
-      "name": "Classes and Instances ",
-      "category": "Lesson",
+      "name": "Phase 1 Project",
+      "category": "Project",
       "due": "02/06/2022",
-      "pomodoroNum": 8,
+      "pomodoroNum": 3,
       "id": 3
     },
     {
       "name": "Functions",
-      "category": "Lab",
+      "category": "Lesson",
       "due": "02/06/2022",
-      "pomodoroNum": 8,
+      "pomodoroNum": 3,
       "id": 4
     }
   ]
